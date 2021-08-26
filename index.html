@@ -9,8 +9,12 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>ANCC IITD</title>
-    <!-- Codeforces CSS-->
-    <style type="text/css">.recent-actions{margin:1em;font-size:.9em}.rated-user{font-family:helvetica neue,Helvetica,Arial,sans-serif;text-decoration:none!important;font-weight:700;display:inline-block}.user-black{color:#000!important;font-weight:400!important}.user-legendary{color:red!important}.user-legendary::first-letter{color:#000!important}.legendary-user-first-letter{color:#000!important}.user-red{color:red!important}.user-fire{color:red!important}.user-yellow{color:#bb0!important}.user-violet{color:#a0a!important}.user-orange{color:#ff8c00!important}.user-blue{color:blue!important}.user-cyan{color:#03a89e!important}.user-green{color:green!important}.user-gray{color:gray!important}.user-admin{color:#000!important}</style>
+    <style>
+      .accordion-button:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    </style>
   </head>
   <body style="background-color: black">
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -136,11 +140,11 @@
         let card="";
           card+="<div class='accordion-item' style='background-color: #22262A'>";
             card+="<div class='accordion-header' id='heading"+i+"'>";
-              card+="<div class='accordion-button text-white";
+              card+="<button class='accordion-button text-white";
               card+= (i) ? " collapsed' " : "' aria-expanded='true' ";
               card+="style='background-color: #181A1D' data-bs-toggle='collapse' data-bs-target='#content"+i+"' aria-controls='content"+i+"'>";
                 card+="<h5 class='m-0'>"+heading+"</h5>";
-              card+="</div>";
+              card+="</button>";
             card+="</div>";
             card+="<div id='content"+i+"' class='accordion-collapse "
               card+= (i) ? "collapse" : "show";
